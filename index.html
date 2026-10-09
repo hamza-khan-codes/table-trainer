@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Table Trainer</title>
+<link rel="stylesheet" href="./code/style.css">
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">MATH PRACTICE</p>
+        <h1>Table Trainer</h1>
+        <p class="subtitle">Practice multiplication with speed and accuracy.</p>
+      </div>
+      <div class="header-controls">
+        <div class="difficulty">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option value="easy" selected>Easy · 30 seconds</option>
+            <option value="medium">Medium · 15 seconds</option>
+            <option value="hard">Hard · 5 seconds</option>
+          </select>
+        </div>
+        <div class="difficulty">
+          <label for="table-range">Multiplication tables</label>
+          <select id="table-range">
+            <option value="2" selected>Table of 2 only</option>
+            <option value="3">Tables 2–3</option>\n <option value="4">Tables 2–4</option>\n <option value="5">Tables 2–5
+            </option>\n <option value="6">Tables 2–6</option>\n <option value="7">Tables 2–7</option>\n <option
+              value="8">Tables 2–8</option>\n <option value="9">Tables 2–9</option>\n <option value="10">Tables 2–10
+            </option>\n <option value="11">Tables 2–11</option>\n <option value="12">Tables 2–12</option>\n <option
+              value="13">Tables 2–13</option>\n <option value="14">Tables 2–14</option>\n <option value="15">Tables 2–15
+            </option>\n <option value="16">Tables 2–16</option>\n <option value="17">Tables 2–17</option>\n <option
+              value="18">Tables 2–18</option>\n <option value="19">Tables 2–19</option>\n <option value="20">Tables 2–20
+            </option>\n <option value="21">Tables 2–21</option>\n
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="Practice statistics">
+      <div class="stat-card"><span class="stat-label">Score</span><strong class="score">0</strong></div>
+      <div class="stat-card"><span class="stat-label">Question</span><strong class="question-number">0 / 10</strong>
+      </div>
+      <div class="stat-card"><span class="stat-label">Time</span><strong class="timer">00:00</strong></div>
+      <div class="stat-card"><span class="stat-label">Accuracy</span><strong class="accuracy">0%</strong></div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-info"><span>Progress</span><span class="progress-text">0 / 10</span></div>
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </section>
+
+    <section class="practice-card">
+      <div class="practice-header"><span class="practice-label">MULTIPLICATION</span><span
+          class="question-status">Ready</span></div>
+      <div class="question" aria-live="polite">
+        <span class="number first-number">0</span><span class="operator">×</span>
+        <span class="number second-number">0</span><span class="operator">=</span><span class="question-mark">?</span>
+      </div>
+      <div class="answer-area">
+        <label for="answer">Your answer</label>
+        <div class="answer-row">
+          <input type="number" id="answer" class="answer-input" placeholder="Enter answer…" autocomplete="off" min="0"
+            inputmode="numeric" />
+          <button type="button" class="voice-btn" disabled aria-label="Answer using voice">🎤
+            <span>Speak</span></button>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="start-btn">Start Practice</button>
+        <button type="button" disabled class="submit-btn"><span>Submit Answer</span><span
+            class="submit-icon">➜</span></button>
+        <button type="button" class="skip-btn" disabled>Skip</button>
+      </div>
+      <div id="feedback-contain" aria-live="polite"></div>
+    </section>
+
+    <section class="history-section">
+      <div class="section-heading">
+        <div>
+          <h2>Recent Answers</h2>
+          <p>Your latest practice results.</p>
+        </div>
+        <button type="button" class="clear-btn">Clear</button>
+      </div>
+      <div class="answer-history">
+        <div class="empty-history">Your answers will appear here.</div>
+      </div>
+    </section>
+  </main>
+  <script src="./code/script.js"></script>
+</body>
+
+</html>
